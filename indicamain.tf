@@ -41,7 +41,7 @@ module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "2.11.0"
 
-  name = "${terraform.workspace}-vpc"
+  name = "${terraform.workspace}-vpc-rm"
   cidr = var.vpc_cidr_range
 
   azs            = slice(data.aws_availability_zones.azs.names, 0, 1)
